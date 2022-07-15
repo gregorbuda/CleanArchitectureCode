@@ -10,10 +10,22 @@ namespace CleanArchitecture.Infrastructure.Repositories
         private Hashtable _repositories;
         private readonly StreamerDbContext _context;
 
+        private  IVideoRepository _videoRepository;
+        private  IStreamerRepository _streamerRepository;
+
+        public IVideoRepository VideoRepository => _videoRepository ??
+            new VideoRepository(_context);
+
+        public IStreamerRepository StreamerRepository => _streamerRepository ??
+        new StreamerRepository(_context);
+
+
         public UnitOfWork(StreamerDbContext context)
         {
             _context = context;
         }
+
+        public StreamerDbContext StreamerDbContext => _context;
 
         public async Task<int> Complete()
         {
@@ -36,7 +48,7 @@ namespace CleanArchitecture.Infrastructure.Repositories
 
             if(!_repositories.ContainsKey(type))
             {
-                var repositoryType = typeof(IAsyncRepository<>);
+                var repositoryType = typeof(RepositoryBase<>);
                 var repositoryInstance = Activator.CreateInstance(repositoryType.MakeGenericType(typeof(TEntity)), _context);
                 _repositories.Add(type, repositoryInstance);
             }

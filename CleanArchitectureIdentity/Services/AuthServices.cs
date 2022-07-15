@@ -14,6 +14,7 @@ namespace CleanArchitectureIdentity.Services
     public class AuthServices : IAuthService
     {
         private readonly UserManager<ApplicationUser> _userManager;
+        //clase de la ddl de identity.
         private readonly SignInManager<ApplicationUser> _singInManager;
         private readonly JwtSettings _jwtSettings;
 

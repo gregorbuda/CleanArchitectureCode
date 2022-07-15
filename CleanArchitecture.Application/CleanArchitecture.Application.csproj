@@ -7,12 +7,42 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" />
+    <Compile Include="obj\Debug\net6.0\CleanArchitecture.Application.AssemblyInfo.cs" />
+    <Compile Include="obj\Debug\net6.0\CleanArchitecture.Application.GlobalUsings.g.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="obj\CleanArchitecture.Application.csproj.nuget.dgspec.json" />
+    <Content Include="obj\Debug\net6.0\CleanArchitecture.Application.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\project.assets.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\CleanArchitecture.Domain\CleanArchitecture.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Features\Directors\Commands\DeleteDirector\" />
+    <Folder Include="Features\Directors\Commands\UpdateDirector\" />
+    <Folder Include="Features\Directors\Queries\" />
     <Folder Include="Features\Streamers\Queries\" />
     <Folder Include="Features\Videos\Commands\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="obj\CleanArchitecture.Application.csproj.nuget.g.props" />
+    <None Include="obj\CleanArchitecture.Application.csproj.nuget.g.targets" />
+    <None Include="obj\Debug\net6.0\CleanArchitecture.Application.AssemblyInfoInputs.cache" />
+    <None Include="obj\Debug\net6.0\CleanArchitecture.Application.assets.cache" />
+    <None Include="obj\Debug\net6.0\CleanArchitecture.Application.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\net6.0\CleanArchitecture.Application.csproj.CopyComplete" />
+    <None Include="obj\Debug\net6.0\CleanArchitecture.Application.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\net6.0\CleanArchitecture.Application.dll" />
+    <None Include="obj\Debug\net6.0\CleanArchitecture.Application.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="obj\Debug\net6.0\CleanArchitecture.Application.pdb" />
+    <None Include="obj\Debug\net6.0\ref\CleanArchitecture.Application.dll" />
+    <None Include="obj\project.nuget.cache" />
   </ItemGroup>
 
   <ItemGroup>

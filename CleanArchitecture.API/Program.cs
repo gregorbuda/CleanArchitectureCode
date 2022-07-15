@@ -4,9 +4,7 @@ using CleanArchitecture.API.Models;
 using CleanArchitecture.Application;
 using CleanArchitecture.Infrastructure;
 using CleanArchitectureIdentity;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Authorization;
-using Microsoft.AspNetCore.Mvc.Formatters;
+
 
 var builder = WebApplication.CreateBuilder(args);
 

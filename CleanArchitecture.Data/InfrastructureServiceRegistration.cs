@@ -7,11 +7,6 @@ using CleanArchitecture.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CleanArchitecture.Infrastructure
 {
@@ -23,6 +18,7 @@ namespace CleanArchitecture.Infrastructure
             services.AddDbContext<StreamerDbContext>(options =>
                 options.UseSqlServer(configuration.GetConnectionString("ConnectionString"))
             );
+
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped(typeof(IAsyncRepository<>), typeof(RepositoryBase<>));
             services.AddScoped<IVideoRepository, VideoRepository>();

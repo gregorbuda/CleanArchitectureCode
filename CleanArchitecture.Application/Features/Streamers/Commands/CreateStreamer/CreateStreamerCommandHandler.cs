@@ -67,6 +67,5 @@ namespace CleanArchitecture.Application.Features.Streamers.Commands
             }
 
         }
-
     }
 }

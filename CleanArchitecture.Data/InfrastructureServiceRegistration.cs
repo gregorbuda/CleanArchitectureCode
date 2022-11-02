@@ -29,6 +29,5 @@ namespace CleanArchitecture.Infrastructure
 
             return services;
         }
-
     }
 }
